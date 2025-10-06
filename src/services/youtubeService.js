@@ -8,7 +8,7 @@ const fetchQueue = new Queue("comments-fetch-queue", { connection: redisConnecti
 
 async function refreshAccessToken(userId) {
   try {
-    console.log(`🔄 Refreshing access token for user ${userId}`);
+    console.log(`Refreshing access token for user ${userId}`);
 
     // Get user from DB
     const userRes = await axios.get(`${process.env.DB_OPS_URL}/user/${userId}`);
