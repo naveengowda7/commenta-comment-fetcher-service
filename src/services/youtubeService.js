@@ -104,7 +104,7 @@ async function startCommentFetch(videoId, userId) {
 
       const res = await axios.get("https://www.googleapis.com/youtube/v3/commentThreads", {
         params: {
-          part: "snippet,replies",
+          part: "snippet",
           videoId,
           maxResults: 100,
           pageToken,
